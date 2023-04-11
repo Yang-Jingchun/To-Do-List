@@ -1,141 +1,371 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 body{
+    font-family: Roboto;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: rgb(0, 82, 136);
-    color: white;
 }
 
-header{
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+.ButtonText{
+    font-size: 14px;
+    font-weight: 500;
 }
 
-header h1{
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    color: rgb(208, 208, 208);
-}
-
-#new-task-form{
+.ReadingText{
+    font-size: 14px;
+    font-weight: 400;
     display: flex;
+    flex-direction: row;
+    margin: 0px;
 }
 
-input,button{
-    appearance:none;
-    border:none;
-    outline:none;
-    background:none;
-}
 
-#new-task-input{
-    flex: 1 1 0%;
-    background-color: white; opacity: 50;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-}
-
-#new-task-submit{
-    color: white;
-    font-size: 1.25rem;
-    font-weight: bold;
-    background-image: linear-gradient(to left, yellow, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor:pointer;
-    transition:0.4s;
-}
-
-#new-task-submit:hover{
-    opacity:0.8;
-}
-#new-task-submit:active{
-    opacity: 0.6;
-}
-
-main{
-    flex: 1 1 0%;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.task-list{
-    padding: 1rem;
-}
-
-.task-list h2{
-    font-size: 1.5rem;
-    font-weight: 300;
-    color:rgb(228, 228, 228);
-    margin-bottom: 1rem;
-}
-#tasks .task{
-    display: flex;
+.div1{
+    height:56px;
+    padding: 16px;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(96, 145, 195);
-    padding: 1rem;
-    border-bottom: 1px solid gray;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    transition:0.4s;
 }
 
-#tasks .task .content .text{
-    color:white;
-    font-size:1.25rem;
-    width: 100%;
-    display: block;
-    transition:0.4s;
-}
 
-#tasks .task .content .text:not(:read-only){
-    color:rgb(31, 47, 87)
-}
-#tasks.task.actions{
+
+.lefticon{
     display: flex;
-    margin:0 -0.5rem
+    flex-direction: row;
+    align-items: center;
+
 }
- .task .actions button{
-    cursor:pointer;
-    margin:0 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    transform: uppercase;
-    transition: 0.4s;
- }
 
- .task .actions button:hover{
-    opacity:0.8;
- }
- .task .actions button:active{
-    opacity:0.6;
- }
+.MenuIcon{
+    height: 24px;
+    width: 24px;
+    padding: 8px;
+}
 
- .task .actions .edit {
-    background-image: linear-gradient(to left, yellow, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor:pointer;
-    transition:0.4s;
- }
- .task .actions .delete{
-    background-image: linear-gradient(to right, yellow, #eba91c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor:pointer;
-    transition:0.4s;
- }
+.YoutubeIcon{
+    height: 20px;
+    width: 90px;
+    padding-top: 18px; padding-bottom: 18px; padding-left: 16px; padding-right: 14px;
+}
+
+.middlesearch{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 2px black;
+    border-radius: 20px;
+    align-items: center;
+
+}
+
+.SearchBar{
+    border-top-left-radius: 30px; border-bottom-left-radius: 30px;
+    border: rgb(214, 214, 214);
+    border-width: 1px;
+    border-style:solid;
+    box-shadow: inset 0 1px 2px; color: rgb(214, 214, 214);
+  
+    height: 40px;
+    width: 540px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding-left: 8px; padding-right: 8px;
+
+    border-top-right-radius: 30px;border-bottom-right-radius: 30px;
+    border: rgb(214, 214, 214);
+    background-color: rgb(214, 214, 214);
+    border-width: 1px;
+    border-style:solid;
+  
+}
+
+.righticon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.MainContent{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+    .ThisVideo{
+        width: 65%;
+        margin: 24px;
+    }
+
+    .video{
+        padding-bottom: 60%;
+        background:url(YoutubeAssets/Applewatch.jpeg);
+        background-size: cover;
+    }
+
+    .ChannelandRating{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+            .channel{
+                flex-direction: row;
+                display: flex;
+                height: 43px;
+                
+            }
+
+                .Name{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 8px; margin-right: 24px;
+                }
+
+                .upperName{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                
+                }
+
+                .SubscribeButton{
+                    height: 36px;
+                    width: 94px;
+                    background-color: black;
+                    border-radius: 18px;
+                    color: aliceblue;
+                    font-weight: 500;
+                    margin-right: 40px;
+                }
+
+            .rating{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            
+            }
+
+                .Like-Dislike{
+                    display: flex;
+                    flex-direction: row;
+                    background-color: rgb(214, 214, 214);
+                    align-items: center;
+                    justify-content: center;
+                    height: 36px;
+                    width: 131px;
+                    border-radius: 18px;
+                    margin-right: 8px;
+                }
+
+                    .Verticaldivider{
+                        width: 1px;
+                        height: 20px;
+                        margin-left: 5px; margin-right: 5px;
+                        background-color: rgb(138, 138, 138);
+                        
+                    }
+                    .like{
+                        flex-direction:row ;
+                        align-items: center;
+                    
+                    }
+                .Share{
+                    background-color: rgb(214, 214, 214);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 18px;
+                    height: 36px;
+                    width: 92px;
+                    margin-right: 8px;
+                }
+
+                .Download{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    width: 118px;
+                    height: 36px;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 18px;
+                    background-color: rgb(214, 214, 214);
+                    margin-right: 8px;
+                }
+
+                .dots{
+                    background-color: rgb(214, 214, 214);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 18px;
+                    height: 36px;
+                    width: 36px;
+                }
+    .Video-Info{
+        margin-top: 12px; 
+        background-color: rgb(214, 214, 214);
+        border-radius: 18px;
+        padding: 12px;
+    }
+
+    .Comment-Top{
+        margin-top: 20px;margin-bottom: 20px;
+    }
+        .Comment-Title{
+            display: flex;
+            flex-direction: row;
+        }
+            .Filter{
+                flex-direction: row;
+                display: flex;
+                margin-left: 36px;
+            }
+
+        .My-Comment{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
+
+        .Comment-Line{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }
+
+        .Horizontal-Divider{
+            height: 1px;
+            color: rgb(102, 102, 102);
+            background-color: gray;
+            
+        }
+
+    .Comment-Buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+        .smiling-face{
+            background-color: rgb(214, 214, 214);
+            width: 36px; height: 36px;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comment-confirm{
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Comment-True{
+            background-color: rgb(214, 214, 214);
+            flex-wrap: wrap;
+            padding-left: 12px; padding-right: 12px;
+            height: 36px;
+            margin-left: 12px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 18px;
+            justify-content: center;
+            align-items: center;
+            border:0px;
+        }
+
+        .shared-comment{
+            display: flex;
+            flex-direction: row;
+            margin-top: 12px; margin-bottom: 12px;
+        }
+
+        .comment-name{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .comment-section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .like{
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+        }
+        .comment-rating{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 8px;
+        }
+        .reply-data{
+            display: flex;
+            flex-direction: row;
+            color: rgb(6,95, 212);
+            margin-top: 8px;
+            align-items: center;
+        }
+
+    .SidePanel{
+        margin-top: 24px; margin-right: 24px;
+        
+    }
+        .tag-list{
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .tag{
+            padding-left: 12px; padding-right: 12px;padding-top: 5px; padding-bottom: 5px;
+            margin-top: 8px;margin-bottom: 8px;margin-right: 8px; 
+            background-color: rgb(214, 214, 214);
+            border-radius: 8px;
+            line-height: 20px;
+        }
+
+        .video-list{
+            flex-direction: row;
+            display: flex;
+            margin-top: 8px;margin-bottom: 8px;
+            
+        }
+        .menu-text{
+            display: flex;
+            flex-direction: column;
+        }
+        .notes{
+            font-size: 12px;
+            color: rgb(60, 60, 60);
+        }
+
+        .word-icon{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .video-image{
+            height: 94px; 
+            margin-right: 8px;
+            border-radius: 8px;
+        }
